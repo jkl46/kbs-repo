@@ -22,7 +22,6 @@ function connectToDatabase() {
     }
     if (!$DatabaseAvailable) {
         ?><h2>Website wordt op dit moment onderhouden.</h2><?php
-        echo "$DB_SERVERNAME $DB_USER $DB_USERPASSWORD $DB_NAME $DB_PORT";
         die();
     }
 
