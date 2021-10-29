@@ -6,10 +6,10 @@
 - Apache server hosting main folder
 - MySql server hosting 'Nerdygadgets' Database set port and setting in .ENV
 
-For databse checkout: [NerdyGadgets](https://www.dropbox.com/s/8iet4y5qr616vxf/Nerdygadgets_database.sql?dl=0)
+For database checkout: [NerdyGadgets](https://www.dropbox.com/s/8iet4y5qr616vxf/Nerdygadgets_database.sql?dl=0)
 
 ---
 
 ### Extra
 **For creating symlink to xamp htdocs**
-windows: 'mklink "{htdocs_folder_path}" "{kbs_repo}"
+On windows: 'mklink "{htdocs_folder_path}" "{kbs_repo}"
