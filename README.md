@@ -12,4 +12,4 @@ For database checkout: [NerdyGadgets](https://www.dropbox.com/s/8iet4y5qr616vxf/
 
 ### Extra
 **For creating symlink to xamp htdocs**
-On windows: `mklink "{htdocs_folder_path}" "{kbs_repo}"`
+On windows: `mklink /D "{htdocs_folder_path}" "{kbs_repo}"`
