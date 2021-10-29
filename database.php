@@ -1,12 +1,20 @@
 <!-- dit bestand bevat alle code die verbinding maakt met de database -->
 <?php
+require("getenv.php");
+use DevCoder\DotEnv;
+(new DotEnv(__DIR__ . '/.ENV'))->load();
 
 function connectToDatabase() {
     $Connection = null;
+    $DB_SERVERNAME      = getenv('DB_SERVERNAME');
+    $DB_USER            = getenv('DB_USER');
+    $DB_USERPASSWORD   = getenv('DB_USERPASSWORD');
+    $DB_NAME            = getenv('DB_NAME');
+    $DB_PORT            = getenv('DB_PORT');
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Set MySQLi to throw exceptions
     try {
-        $Connection = mysqli_connect("localhost", "root", "", "nerdygadgets");
+        $Connection = mysqli_connect($DB_SERVERNAME, $DB_USER, $DB_USERPASSWORD, $DB_NAME, $DB_PORT);
         mysqli_set_charset($Connection, 'latin1');
         $DatabaseAvailable = true;
     } catch (mysqli_sql_exception $e) {
@@ -14,6 +22,7 @@ function connectToDatabase() {
     }
     if (!$DatabaseAvailable) {
         ?><h2>Website wordt op dit moment onderhouden.</h2><?php
+        echo "$DB_SERVERNAME $DB_USER $DB_USERPASSWORD $DB_NAME $DB_PORT";
         die();
     }
 
