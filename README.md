@@ -14,5 +14,5 @@ For database checkout: [NerdyGadgets](https://www.dropbox.com/s/8iet4y5qr616vxf/
 **SQL login**
 Change user and userpassword in .ENV
 
-**For creating symlink to xamp htdocs**
+**Creating symlink to xamp htdocs**
 On windows: `mklink /D "{htdocs_folder_path}" "{kbs_repo}"`
