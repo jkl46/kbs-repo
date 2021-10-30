@@ -1,6 +1,4 @@
 # KBS windesheim 2021-2022
-## Group ICT1Mo.2
-
 
 ### Requirements
 - Apache server hosting main folder
