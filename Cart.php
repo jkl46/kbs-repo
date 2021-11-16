@@ -1,5 +1,6 @@
 <?php
-include "cartfuncties.php";
+include "header.php";
+$cart = getCart();
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -8,17 +9,23 @@ include "cartfuncties.php";
     <title>Winkelwagen</title>
 </head>
 <body>
+    <div style="text-align:center;width: 600px;margin: 0 auto;"> 
 <h1>Inhoud Winkelwagen</h1>
-
-<?php
-$cart = getCart();
-print_r($cart);
-//gegevens per artikelen in $cart (naam, prijs, etc.) uit database halen
-//totaal prijs berekenen
-//mooi weergeven in html
-//etc.
-
-?>
-<p><a href='view.php?id=0'>Naar artikelpagina van artikel 0</a></p>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Aantal</th>
+  </tr>
+  <?php
+  foreach($cart as $productID => $amount){
+  print("<tr>");
+  print("<th>$productID</th>");
+  print("<th>$amount</th>");
+  print("</tr>");
+  }
+  ?>
+</table> 
+<p><a href='/'>Terug naar webshop</a></p>
+</div>
 </body>
 </html>

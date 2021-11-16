@@ -2,6 +2,7 @@
 <?php
 include "session.php";
 include "database.php";
+include "cartfunctions.php";
 $databaseConnection = connectToDatabase();
 ?>
 <!DOCTYPE html>
@@ -50,6 +51,8 @@ $databaseConnection = connectToDatabase();
 <ul id="ul-class-navigation">
             <li>
                 <a href="browse.php" class="HrefDecoration"><i class="fas fa-search search"></i> Zoeken</a>
+                <i class="HrefDecoration">|</i>
+                <a href="cart.php" class="HrefDecoration"><i class="fas"></i> Winkelwagen</a>
             </li>
         </ul>
 

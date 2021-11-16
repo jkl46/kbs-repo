@@ -135,7 +135,6 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
 </div>
 
 <?php
-include "cartfuncties.php";
 ?>
 <!DOCTYPE html>
 <html lang="nl">
