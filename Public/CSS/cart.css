@@ -1,6 +1,27 @@
-i .add{
-    color:green;
+:root{
+ --secondary-purple: #595fd5;
 }
-i .remove{
-    color:red;
+
+.cart-title{
+    text-align: center;
+}
+
+.add, .remove{
+    background-color: var(--secondary-purple);
+    border-radius: 50%;
+    color:white;
+}
+
+.main-content{
+    padding:0;
+    margin:0;
+}
+
+
+.amount-input{
+    width: 50px;
+}
+.cart-table{
+    align-self: center;
+    margin: auto;
 }
