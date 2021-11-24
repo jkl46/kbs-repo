@@ -1,12 +1,12 @@
 :root{
- --secondary-purple: #595fd5;
+--secondary-purple: #595fd5;
 }
 
 .cart-title{
     text-align: center;
 }
 
-.add, .remove{
+.add, .remove, .clear{
     background-color: var(--secondary-purple);
     border-radius: 50%;
     color:white;
@@ -17,6 +17,9 @@
     margin:0;
 }
 
+.clear{
+    color: red;
+}
 
 .amount-input{
     width: 50px;
@@ -24,4 +27,7 @@
 .cart-table{
     align-self: center;
     margin: auto;
+}   
+.close-col {
+    border-top: 1px white solid;
 }
