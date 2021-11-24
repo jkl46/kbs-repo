@@ -12,6 +12,8 @@ $totalCost = 0;
 </head>
 <body>
 <div class='main-content'> 
+<?php if(!count($cart) <1){
+  ?>
 <h1 class='cart-title'>Inhoud Winkelwagen</h1>
 <table class='cart-table'>
   <tr>
@@ -53,7 +55,12 @@ $totalCost = 0;
     <th><?php print(number_format($totalCost, 2)); ?></th>
     <th></th>
   </tr>
-</table> 
+</table>
+<?php } else{
+  ?>
+  <h1 class="cart-title">WINKEL WAGEN LEEG GA IS <a href="browse.php">KOPEN</a> DAN</h1>
+  <?php
+} ?>
 </div>
 <script>
   function update_cart(stockItemID, method, setAmount=0){
