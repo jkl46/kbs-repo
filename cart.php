@@ -58,13 +58,12 @@ $totalCost = 0;
 </table>
 <?php } else{
   ?>
-  <h1 class="cart-title">WINKEL WAGEN LEEG GA IS <a href="browse.php">KOPEN</a> DAN</h1>
+  <h1 class="cart-title">Winkelwagen is leeg, ga naar <a href="browse.php">webshop</a>.</h1>
   <?php
 } ?>
 </div>
 <script>
   function update_cart(stockItemID, method, setAmount=0){
-    console.log('asokajdsokams');
     $.get('updatecart.php',
   {
     'stockItemID': stockItemID, 
@@ -84,7 +83,6 @@ $('.table-btn').click((e) => {
   update_cart(stockItemID, method);
 })
 
-// TOO BE MADE
 // Update cart on input field event
 // $('.amount-input').blur((e) => {
 
